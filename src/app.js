@@ -1,4 +1,10 @@
+// Importa o Express
 const express = require('express');
+
+// Importa algumas funcionalidades que veremos depois
+const path = require('path');
+const cors = require('cors');
+
 const app = express();
 
 // Permite que o servidor entenda JSON no corpo das requisições
@@ -28,7 +34,8 @@ app.get('/index', (req, res) => {
 // Envio de uma resposta em JSON
 app.get('/json', (req, res) => {
   res.json({
-    titulo: "Olá, "
+    titulo: "Olá, esta é uma resposta json",
+    conteudo: "Basicamente um objeto javascript, mas só isso mesmo"
   });
 });
 
