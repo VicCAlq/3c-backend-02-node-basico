@@ -29,3 +29,39 @@
   */
 
 
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+// Rota /uno
+app.get('/uno', (req, res) => {
+  res.send(`
+    <html>
+      <head>
+        <title>Tudo começa aqui</title>
+      </head>
+      <body>
+        <h1>A próxima rota é em Inglês</h1>
+        <p>Para acessar ela, como se chama o número 2 em inglês?</p>
+      </body>
+    </html>
+  `);
+});
+
+// Rota /two
+app.get('/two', (req, res) => {
+  res.sendFile(path.join(__dirname, 'two.html'));
+});
+
+// Rota /san
+app.get('/san', (req, res) => {
+  res.json({
+    titulo: "San",
+    conteudo: "Próximas atividades a gente elabora os outros métodos HTML"
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando na 3000');
+});
