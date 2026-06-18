@@ -13,18 +13,17 @@
   * }
   */
 
-const express = require('express');
+   const express = require('express')
+   
+   const app = express ();
 
-const app = express();
-
-app.get('/objeto', (req, res) => {
-  res.json({
-    acesso: "OK",
-    titulo: "Responda a pergunta abaixo:",
-    pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?"
-  });
-});
-
-app.listen(3000, () => {
-  console.log('Servidor rodando na 3000');
-});
+   app.get('/objeto', ( req,res)=>{
+    res.json({
+      acesso: "ok",
+      titulo: "titulo",
+      pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?"
+    });
+   });
+   app.listen(3000, () =>{
+    console.log('servidor rodando na 3000');
+   });

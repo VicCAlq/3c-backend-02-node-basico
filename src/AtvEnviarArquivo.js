@@ -8,15 +8,15 @@
   * "indexAtividade.js" de dentro da pasta src:
   */
 
-const express = require('express');
+const express = require('express')
 const path = require('path');
 
-const app = express();
+const app =  expres();
 
 app.get('/index', (req, res) => {
-  res.sendFile(path.join(__dirname, 'src', 'indexAtividade.js'));
+  res.sendefile(path.join(__dirname, 'src','indexAtividade.js'))
 });
 
 app.listen(3000, () => {
-  console.log('Servidor rodando na 3000');
-});
+  console.log('servidor rodando na 3000')
+})
