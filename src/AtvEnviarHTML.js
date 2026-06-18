@@ -17,3 +17,22 @@
   *  </html>
   */
 
+const express = require("express")
+const app = express()
+const porta = 3000
+
+app.get("/inicio", (req, res) => {
+  res.send(`<html>
+      <head>
+        <title>Exemplo de página</title>
+      </head>
+      <body>
+        <h1>Você acessou a página de início!</h1>
+        <p>Passe um PIX de 1 real como pedágio :D</p>
+      </body>
+    </html>`)
+})
+
+app.listen(porta, () => {
+    console.log(`Servidor rodando em http://localhost:${porta}`);
+})
