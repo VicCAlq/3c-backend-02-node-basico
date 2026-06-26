@@ -13,3 +13,16 @@
   * }
   */
 
+const express = require('express');
+const app = express();
+
+app.get('/objeto', (req, res) => {
+  res.json({
+    titulo: "Responda a pergunta abaixo:",
+    pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
+  });
+});
+
+app.listen(3000, () => {
+  console.log('Servidor rodando em http://localhost:3000');
+});
