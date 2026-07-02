@@ -12,4 +12,18 @@
   *   pergunta: "Quem é mais redondo, o Kirby ou o Jigglypuff?",
   * }
   */
+const express = require("express")
+const app = express()
 
+app.use(express.json())
+
+app.get('/objeto', (req, res) => {
+  res.json({
+    acesso: "OK",
+    titulo: "Responda a pergunta abaixo:",
+    pergunta: "Quem é mais redondo, o Snorlax ou o Voltorb?",
+  })
+})
+
+app.listen(3000, () => 
+  {console.log("Servidor rodando em http://localhost:3000")
